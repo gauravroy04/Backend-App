@@ -13,4 +13,14 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static("public"));
 app.use(cookieParser);
 
+//Routes
+// import userRouter from './routes/user.routes.js';
+
+
+//Declaration
+app.get("/", (req,res) => {     
+    res.status(200).json({success:true, message:"ok"}); 
+});
+// app.use("/api/v1/users", userRouter);
+
 export {app}
